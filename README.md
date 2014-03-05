@@ -1,4 +1,4 @@
-tfsexpress.build
-================
+# Chocolatey Package for Team Foundation Server with Build
 
-A Chocolatey package for installing Team Foundation Server and configuring it with build capabilities.
+## Code Coming Soon!
+If you are interested in contributing to this project, please contact [Ian Buchanan](mailto:ian.buchanan@versionone.com).
