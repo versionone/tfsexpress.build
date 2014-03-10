@@ -13,7 +13,8 @@ try {
 	$path = (Get-ChildItem -path $env:systemdrive\ -filter "tfsconfig.exe" -erroraction silentlycontinue  -recurse)[0].FullName
 
 	Write-Host "Configuring TFS standard" do
-	& $path unattend /configure /type:build
+	& $path unattend /configure /type:build `
+		/inputs:collectionurl=http://localhost:8080/tfs`;ServiceAccountName="LOCAL SERVICE"`;ServiceAccountPassword="pass"
 
 	$iisVersion = (get-itemproperty HKLM:\SOFTWARE\Microsoft\InetStp\ -erroraction silentlycontinue | select MajorVersion).MajorVersion
 
